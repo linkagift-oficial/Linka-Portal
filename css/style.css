@@ -1,0 +1,748 @@
+
+/* =========================================================
+   LINKA GIFT
+   Portal Interno
+   style.css
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+
+  --azul: #071a33;
+  --azul-claro: #0d2a50;
+  --azul-hover: #123966;
+
+  --dourado: #c99a3d;
+  --dourado-claro: #e4bd68;
+
+  --branco: #ffffff;
+  --fundo: #f4f6f9;
+
+  --texto: #182230;
+  --texto-suave: #6b7280;
+
+  --borda: #dce2e9;
+
+  --erro: #c62828;
+  --erro-fundo: #fff1f1;
+
+  --sucesso: #16794b;
+  --sucesso-fundo: #eefbf5;
+
+  --sombra:
+    0 18px 50px rgba(7, 26, 51, 0.14);
+
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201, 154, 61, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fafc 0%,
+      #eef2f6 100%
+    );
+
+  color: var(--texto);
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   PÁGINA DE LOGIN
+   ========================================================= */
+
+.login-page {
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 20px;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+/* Detalhe decorativo superior */
+
+.login-page::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(201, 154, 61, 0.08);
+
+  pointer-events: none;
+
+}
+
+
+/* Detalhe decorativo inferior */
+
+.login-page::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  bottom: -300px;
+  left: -220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(7, 26, 51, 0.05);
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.login-card {
+
+  width: 100%;
+  max-width: 430px;
+
+  background: var(--branco);
+
+  border:
+    1px solid
+    rgba(7, 26, 51, 0.08);
+
+  border-radius: 22px;
+
+  padding: 38px 36px 30px;
+
+  box-shadow: var(--sombra);
+
+  position: relative;
+  z-index: 2;
+
+}
+
+
+/* Linha dourada superior */
+
+.login-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 95px;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--dourado),
+      var(--dourado-claro)
+    );
+
+  border-radius:
+    0 0 10px 10px;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-area {
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+}
+
+.logo {
+
+  display: block;
+
+  max-width: 210px;
+  max-height: 90px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.login-header {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+}
+
+.login-header h1 {
+
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  color: var(--azul);
+
+  margin-bottom: 8px;
+
+}
+
+.login-header p {
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: var(--texto-suave);
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.login-form {
+
+  width: 100%;
+
+}
+
+.form-group {
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: var(--azul);
+
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-wrapper {
+
+  width: 100%;
+  height: 52px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background: #fafbfc;
+
+  border:
+    1px solid
+    var(--borda);
+
+  border-radius: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.input-wrapper:focus-within {
+
+  background: var(--branco);
+
+  border-color: var(--dourado);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(201, 154, 61, 0.12);
+
+}
+
+
+/* Ícone */
+
+.input-icon {
+
+  width: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 17px;
+
+  opacity: 0.72;
+
+}
+
+
+/* Campo */
+
+.input-wrapper input {
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  padding:
+    0 12px 0 0;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  color: var(--texto);
+
+}
+
+.input-wrapper input::placeholder {
+
+  color: #9aa3af;
+
+}
+
+
+/* Evita fundo estranho do autofill */
+
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover,
+.input-wrapper input:-webkit-autofill:focus {
+
+  -webkit-text-fill-color:
+    var(--texto);
+
+  transition:
+    background-color
+    9999s ease-in-out 0s;
+
+}
+
+
+/* =========================================================
+   MOSTRAR SENHA
+   ========================================================= */
+
+.toggle-password {
+
+  width: 46px;
+  height: 100%;
+
+  flex-shrink: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  opacity: 0.65;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.toggle-password:hover {
+
+  opacity: 1;
+
+}
+
+.toggle-password:active {
+
+  transform: scale(0.92);
+
+}
+
+
+/* =========================================================
+   MENSAGEM
+   ========================================================= */
+
+.login-message {
+
+  display: none;
+
+  width: 100%;
+
+  margin:
+    -4px 0 17px;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  text-align: center;
+
+}
+
+.login-message.erro {
+
+  display: block;
+
+  color: var(--erro);
+
+  background: var(--erro-fundo);
+
+  border:
+    1px solid
+    rgba(198, 40, 40, 0.15);
+
+}
+
+.login-message.sucesso {
+
+  display: block;
+
+  color: var(--sucesso);
+
+  background: var(--sucesso-fundo);
+
+  border:
+    1px solid
+    rgba(22, 121, 75, 0.15);
+
+}
+
+
+/* =========================================================
+   BOTÃO ENTRAR
+   ========================================================= */
+
+.btn-login {
+
+  width: 100%;
+  height: 52px;
+
+  border: 0;
+  border-radius: 12px;
+
+  margin-top: 3px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul),
+      var(--azul-claro)
+    );
+
+  color: var(--branco);
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(7, 26, 51, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.btn-login:hover {
+
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul-claro),
+      var(--azul-hover)
+    );
+
+  box-shadow:
+    0 11px 25px
+    rgba(7, 26, 51, 0.23);
+
+}
+
+.btn-login:active {
+
+  transform: translateY(0);
+
+}
+
+.btn-login:disabled {
+
+  cursor: not-allowed;
+
+  opacity: 0.65;
+
+  transform: none;
+
+  box-shadow: none;
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.login-footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    #edf0f3;
+
+  font-size: 12px;
+
+  color: var(--texto-suave);
+
+}
+
+.security-icon {
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .login-page {
+
+    padding: 20px 15px;
+
+  }
+
+  .login-card {
+
+    max-width: 390px;
+
+    padding:
+      32px 23px 25px;
+
+    border-radius: 18px;
+
+  }
+
+  .logo {
+
+    max-width: 185px;
+    max-height: 80px;
+
+  }
+
+  .login-header {
+
+    margin-bottom: 25px;
+
+  }
+
+  .login-header h1 {
+
+    font-size: 24px;
+
+  }
+
+  .input-wrapper,
+  .btn-login {
+
+    height: 50px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+  .login-card {
+
+    padding:
+      28px 18px 23px;
+
+  }
+
+  .login-header h1 {
+
+    font-size: 22px;
+
+  }
+
+  .logo {
+
+    max-width: 165px;
+
+  }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible {
+
+  outline:
+    2px solid
+    var(--dourado);
+
+  outline-offset: 2px;
+
+}
+
+
+/* =========================================================
+   REDUZ ANIMAÇÕES QUANDO CONFIGURADO NO DISPOSITIVO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    scroll-behavior: auto !important;
+
+    transition: none !important;
+
+  }
+
+}
