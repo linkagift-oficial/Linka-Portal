@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Painel Interno | Linka Gift</title>
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/favicon.png"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="css/painel.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- TELA DE CARREGAMENTO -->
+  <div
+    id="loadingScreen"
+    class="loading-screen"
+  >
+
+    <div class="loading-box">
+
+      <img
+        src="assets/logo.png"
+        alt="Linka Gift"
+        class="loading-logo"
+      >
+
+      <div class="loading-spinner"></div>
+
+      <p>
+        Verificando acesso...
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- PAINEL -->
+  <main
+    id="painel"
+    class="painel"
+    hidden
+  >
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+
+      <div class="topo-conteudo">
+
+        <!-- LOGO -->
+        <div class="topo-logo">
+
+          <img
+            src="assets/logo.png"
+            alt="Linka Gift"
+          >
+
+        </div>
+
+
+        <!-- USUÁRIO -->
+        <div class="topo-usuario">
+
+          <div class="usuario-info">
+
+            <span class="usuario-label">
+              Conectado como
+            </span>
+
+            <strong
+              id="nomeUsuario"
+              class="usuario-nome"
+            >
+              Administrador
+            </strong>
+
+          </div>
+
+
+          <button
+            type="button"
+            id="btnSair"
+            class="btn-sair"
+          >
+            Sair
+          </button>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <section class="conteudo">
+
+      <!-- BOAS-VINDAS -->
+      <div class="boas-vindas">
+
+        <span class="boas-vindas-etiqueta">
+          PORTAL INTERNO
+        </span>
+
+        <h1>
+          Painel Administrativo
+        </h1>
+
+        <p>
+          Selecione o sistema que deseja acessar.
+        </p>
+
+      </div>
+
+
+      <!-- CARDS -->
+      <div class="cards">
+
+
+        <!-- PAINEL ADMINISTRATIVO -->
+        <a
+          href="https://linkagift.com.br/gestao-212327"
+          class="card-sistema"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="card-icone">
+            ⚙️
+          </div>
+
+          <div class="card-conteudo">
+
+            <h2>
+              Painel Administrativo
+            </h2>
+
+            <p>
+              Acesse as ferramentas administrativas
+              da Linka Gift.
+            </p>
+
+          </div>
+
+          <div class="card-seta">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- TERMO DE CONSIGNAÇÃO -->
+        <a
+          href="https://linkagift-nfc.github.io/Linka-Consignacao/"
+          class="card-sistema"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="card-icone">
+            📄
+          </div>
+
+          <div class="card-conteudo">
+
+            <h2>
+              Termo de Consignação
+            </h2>
+
+            <p>
+              Preencha, assine e compartilhe
+              os termos de consignação.
+            </p>
+
+          </div>
+
+          <div class="card-seta">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- CONTROLE DE ESTOQUE -->
+        <a
+          href="https://linkagift-oficial.github.io/Linka-Estoque/"
+          class="card-sistema"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="card-icone">
+            📦
+          </div>
+
+          <div class="card-conteudo">
+
+            <h2>
+              Controle de Estoque
+            </h2>
+
+            <p>
+              Consulte produtos, quantidades
+              e distribuição entre lojas.
+            </p>
+
+          </div>
+
+          <div class="card-seta">
+            →
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+      <!-- RODAPÉ -->
+      <footer class="rodape">
+
+        <span>
+          🔒
+        </span>
+
+        <span>
+          Ambiente interno Linka Gift
+        </span>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+
+  <!-- MENSAGEM DE ERRO -->
+  <div
+    id="erroSessao"
+    class="erro-sessao"
+    hidden
+  >
+
+    <div class="erro-sessao-box">
+
+      <div class="erro-icone">
+        🔒
+      </div>
+
+      <h2>
+        Acesso não autorizado
+      </h2>
+
+      <p>
+        Sua sessão expirou ou você não está conectado.
+      </p>
+
+      <a
+        href="index.html"
+        class="btn-login-voltar"
+      >
+        Ir para o login
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/painel.js"></script>
+
+</body>
+
+</html>
