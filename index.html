@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Portal Interno | Linka Gift</title>
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/favicon.png"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+<body>
+
+  <main class="login-page">
+
+    <section class="login-card">
+
+      <!-- LOGO -->
+      <div class="logo-area">
+
+        <img
+          src="assets/logo.png"
+          alt="Linka Gift"
+          class="logo"
+        >
+
+      </div>
+
+
+      <!-- CABEÇALHO -->
+      <div class="login-header">
+
+        <h1>Portal Interno</h1>
+
+        <p>
+          Acesso administrativo Linka Gift
+        </p>
+
+      </div>
+
+
+      <!-- FORMULÁRIO -->
+      <form
+        id="loginForm"
+        class="login-form"
+      >
+
+        <!-- E-MAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            E-mail
+          </label>
+
+          <div class="input-wrapper">
+
+            <span class="input-icon">
+              ✉
+            </span>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- SENHA -->
+        <div class="form-group">
+
+          <label for="senha">
+            Senha
+          </label>
+
+          <div class="input-wrapper">
+
+            <span class="input-icon">
+              🔒
+            </span>
+
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+              required
+            >
+
+            <button
+              type="button"
+              id="toggleSenha"
+              class="toggle-password"
+              aria-label="Mostrar ou ocultar senha"
+            >
+              👁
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+        <div
+          id="loginMensagem"
+          class="login-message"
+          aria-live="polite"
+        ></div>
+
+
+        <!-- BOTÃO -->
+        <button
+          type="submit"
+          id="btnEntrar"
+          class="btn-login"
+        >
+
+          <span class="btn-text">
+            Entrar
+          </span>
+
+          <span
+            class="btn-loading"
+            hidden
+          >
+            Entrando...
+          </span>
+
+        </button>
+
+      </form>
+
+
+      <!-- RODAPÉ -->
+      <div class="login-footer">
+
+        <span class="security-icon">
+          🔒
+        </span>
+
+        <span>
+          Ambiente de uso interno
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>
+
