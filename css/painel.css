@@ -1,0 +1,1097 @@
+/*************************************************
+ * LINKA GIFT
+ * Portal Interno
+ * painel.css
+ *************************************************/
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+
+  --azul: #071a33;
+  --azul-claro: #0d2a50;
+  --azul-hover: #123966;
+
+  --dourado: #c99a3d;
+  --dourado-claro: #e4bd68;
+
+  --branco: #ffffff;
+  --fundo: #f4f6f9;
+
+  --texto: #182230;
+  --texto-suave: #6b7280;
+
+  --borda: #e1e6ec;
+
+  --erro: #b42318;
+  --erro-fundo: #fff5f4;
+
+  --sombra:
+    0 12px 35px
+    rgba(7, 26, 51, 0.09);
+
+}
+
+
+/* =========================================================
+   HTML / BODY
+   ========================================================= */
+
+html,
+body {
+
+  width: 100%;
+  min-height: 100%;
+
+}
+
+body {
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201, 154, 61, 0.10),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fafc 0%,
+      #eef2f6 100%
+    );
+
+  color: var(--texto);
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   ATRIBUTO HIDDEN
+   ========================================================= */
+
+[hidden] {
+
+  display: none !important;
+
+}
+
+
+/* =========================================================
+   PAINEL
+   ========================================================= */
+
+.painel {
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+}
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.topo {
+
+  width: 100%;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  border-bottom:
+    1px solid
+    rgba(7, 26, 51, 0.08);
+
+  box-shadow:
+    0 3px 15px
+    rgba(7, 26, 51, 0.04);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+}
+
+
+.topo-conteudo {
+
+  width: 100%;
+  max-width: 1180px;
+
+  min-height: 84px;
+
+  margin: 0 auto;
+
+  padding:
+    13px 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.topo-logo {
+
+  display: flex;
+  align-items: center;
+
+}
+
+
+.topo-logo img {
+
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 180px;
+  max-height: 58px;
+
+  object-fit: contain;
+
+}
+
+
+/* =========================================================
+   USUÁRIO
+   ========================================================= */
+
+.topo-usuario {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+.usuario-info {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+
+}
+
+
+.usuario-label {
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  color: var(--texto-suave);
+
+}
+
+
+.usuario-nome {
+
+  max-width: 230px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 14px;
+
+  color: var(--azul);
+
+}
+
+
+/* =========================================================
+   BOTÃO SAIR
+   ========================================================= */
+
+.btn-sair {
+
+  min-width: 76px;
+  height: 39px;
+
+  padding:
+    0 18px;
+
+  border:
+    1px solid
+    rgba(7, 26, 51, 0.14);
+
+  border-radius: 9px;
+
+  background: var(--branco);
+
+  color: var(--azul);
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+.btn-sair:hover {
+
+  background: var(--azul);
+
+  border-color: var(--azul);
+
+  color: var(--branco);
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+.btn-sair:disabled {
+
+  cursor: wait;
+
+  opacity: 0.6;
+
+  transform: none;
+
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.conteudo {
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding:
+    70px 28px 40px;
+
+}
+
+
+/* =========================================================
+   BOAS-VINDAS
+   ========================================================= */
+
+.boas-vindas {
+
+  max-width: 700px;
+
+  margin-bottom: 40px;
+
+}
+
+
+.boas-vindas-etiqueta {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 27px;
+
+  padding:
+    0 12px;
+
+  margin-bottom: 13px;
+
+  border:
+    1px solid
+    rgba(201, 154, 61, 0.26);
+
+  border-radius: 100px;
+
+  background:
+    rgba(201, 154, 61, 0.08);
+
+  color: #9b7022;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+}
+
+
+.boas-vindas h1 {
+
+  margin-bottom: 10px;
+
+  color: var(--azul);
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.7px;
+
+}
+
+
+.boas-vindas p {
+
+  color: var(--texto-suave);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card-sistema {
+
+  min-height: 230px;
+
+  padding:
+    27px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  position: relative;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  border:
+    1px solid
+    rgba(7, 26, 51, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow: var(--sombra);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+
+}
+
+
+/* Linha dourada */
+
+.card-sistema::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--dourado),
+      var(--dourado-claro)
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.2s ease;
+
+}
+
+
+.card-sistema:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(201, 154, 61, 0.28);
+
+  box-shadow:
+    0 20px 45px
+    rgba(7, 26, 51, 0.13);
+
+}
+
+
+.card-sistema:hover::before {
+
+  opacity: 1;
+
+}
+
+
+/* =========================================================
+   ÍCONE
+   ========================================================= */
+
+.card-icone {
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 23px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul),
+      var(--azul-claro)
+    );
+
+  box-shadow:
+    0 8px 18px
+    rgba(7, 26, 51, 0.16);
+
+  font-size: 23px;
+
+}
+
+
+/* =========================================================
+   TEXTO DO CARD
+   ========================================================= */
+
+.card-conteudo {
+
+  padding-right: 20px;
+
+}
+
+
+.card-conteudo h2 {
+
+  margin-bottom: 9px;
+
+  color: var(--azul);
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+}
+
+
+.card-conteudo p {
+
+  color: var(--texto-suave);
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   SETA
+   ========================================================= */
+
+.card-seta {
+
+  position: absolute;
+
+  right: 22px;
+  bottom: 20px;
+
+  color: var(--dourado);
+
+  font-size: 23px;
+
+  font-weight: 300;
+
+  transition:
+    transform 0.2s ease;
+
+}
+
+
+.card-sistema:hover
+.card-seta {
+
+  transform:
+    translateX(4px);
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+
+  margin-top: 55px;
+
+  padding-top: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-top:
+    1px solid
+    rgba(7, 26, 51, 0.07);
+
+  color: var(--texto-suave);
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   TELA DE CARREGAMENTO
+   ========================================================= */
+
+.loading-screen {
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+}
+
+
+.loading-box {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+
+.loading-logo {
+
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 190px;
+  max-height: 85px;
+
+  object-fit: contain;
+
+  margin-bottom: 30px;
+
+}
+
+
+.loading-spinner {
+
+  width: 34px;
+  height: 34px;
+
+  margin-bottom: 15px;
+
+  border:
+    3px solid
+    rgba(7, 26, 51, 0.12);
+
+  border-top-color:
+    var(--dourado);
+
+  border-radius: 50%;
+
+  animation:
+    girar 0.8s linear infinite;
+
+}
+
+
+.loading-box p {
+
+  color: var(--texto-suave);
+
+  font-size: 13px;
+
+}
+
+
+@keyframes girar {
+
+  to {
+
+    transform:
+      rotate(360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   ERRO DE SESSÃO
+   ========================================================= */
+
+.erro-sessao {
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+}
+
+
+.erro-sessao-box {
+
+  width: 100%;
+  max-width: 420px;
+
+  padding:
+    40px 32px;
+
+  text-align: center;
+
+  background: var(--branco);
+
+  border:
+    1px solid
+    rgba(7, 26, 51, 0.08);
+
+  border-radius: 20px;
+
+  box-shadow: var(--sombra);
+
+}
+
+
+.erro-icone {
+
+  width: 60px;
+  height: 60px;
+
+  margin:
+    0 auto 20px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--erro-fundo);
+
+  font-size: 25px;
+
+}
+
+
+.erro-sessao-box h2 {
+
+  margin-bottom: 9px;
+
+  color: var(--azul);
+
+  font-size: 23px;
+
+}
+
+
+.erro-sessao-box p {
+
+  margin-bottom: 25px;
+
+  color: var(--texto-suave);
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   VOLTAR PARA LOGIN
+   ========================================================= */
+
+.btn-login-voltar {
+
+  min-height: 48px;
+
+  padding:
+    0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul),
+      var(--azul-claro)
+    );
+
+  color: var(--branco);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.btn-login-voltar:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(7, 26, 51, 0.20);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .cards {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .topo-conteudo {
+
+    min-height: 72px;
+
+    padding:
+      10px 16px;
+
+  }
+
+
+  .topo-logo img {
+
+    max-width: 125px;
+    max-height: 48px;
+
+  }
+
+
+  .topo-usuario {
+
+    gap: 10px;
+
+  }
+
+
+  .usuario-info {
+
+    display: none;
+
+  }
+
+
+  .btn-sair {
+
+    min-width: 64px;
+
+    height: 37px;
+
+    padding:
+      0 13px;
+
+  }
+
+
+  .conteudo {
+
+    padding:
+      42px 17px 30px;
+
+  }
+
+
+  .boas-vindas {
+
+    margin-bottom: 27px;
+
+  }
+
+
+  .boas-vindas h1 {
+
+    font-size: 27px;
+
+  }
+
+
+  .boas-vindas p {
+
+    font-size: 14px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns:
+      1fr;
+
+    gap: 15px;
+
+  }
+
+
+  .card-sistema {
+
+    min-height: 185px;
+
+    padding:
+      23px 21px;
+
+  }
+
+
+  .card-icone {
+
+    width: 47px;
+    height: 47px;
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+
+  }
+
+
+  .card-conteudo h2 {
+
+    font-size: 17px;
+
+  }
+
+
+  .rodape {
+
+    margin-top: 38px;
+
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+  .topo-logo img {
+
+    max-width: 110px;
+
+  }
+
+
+  .conteudo {
+
+    padding-left: 14px;
+    padding-right: 14px;
+
+  }
+
+
+  .boas-vindas h1 {
+
+    font-size: 24px;
+
+  }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+
+  outline:
+    2px solid
+    var(--dourado);
+
+  outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   REDUZIR MOVIMENTO
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  *,
+  *::before,
+  *::after {
+
+    transition:
+      none !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+  }
+
+}
